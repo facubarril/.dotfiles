@@ -1,0 +1,192 @@
+@define-color highlight rgba (255, 193, 61, 1);
+@define-color bgLight rgba (5, 29, 56, .9);
+@define-color bgDark rgba (2, 12, 23, .9);
+@define-color bgDarkFull rgba (2, 12, 23, 1);
+@define-color shadow rgba (2, 12, 23, .3);
+
+* {
+    font-size: 15px;
+    font-family: "CodeNewRoman Nerd Font Propo";
+}
+
+window#waybar{
+    all:unset;
+}
+
+.modules-left {
+    padding: 7px;
+    margin: 10 0 0 10;
+    border-radius: 5px;
+    background: @bgLight;
+    box-shadow: 0 0 2px @shadow;
+}
+.modules-center {
+    padding:7px;
+    margin:10 0 0 0;
+    border-radius: 5px;
+    background: @bgLight;
+    box-shadow: 0 0 2px @shadow;
+}
+.modules-right {
+    padding:7px;
+    margin: 10 10 0 0;
+    border-radius: 5px;
+    background: @bgLight;
+    box-shadow: 0 0 2px @shadow;
+}
+
+tooltip {
+    background: @bgDarkFull;
+    color: #ffffff;
+}
+
+#clock:hover, #custom-update:hover, #custom-notification:hover,#bluetooth:hover,#network:hover,#battery:hover, #cpu:hover,#memory:hover,#temperature:hover{
+    transition: all .3s ease;
+    color: @highlight;
+}
+
+#custom-notification {
+    padding: 0 5px;
+    transition: all .3s ease;
+    color:#ffffff;
+}
+
+#clock {
+    padding: 0 5px;
+    color:#ffffff;
+    transition: all .3s ease;
+}
+
+#custom-update {
+    padding: 0 5px;
+    transition: all .3s ease;
+    color:#ffffff;
+}
+
+#workspaces {
+    padding: 0 5px;
+}
+#workspaces button {
+    all:unset;
+    -gtk-icon-transform: rotate(90deg);
+    padding: 0 5px;
+    color: #ffffff;
+    transition: all .2s ease;
+}
+#workspaces button.active {
+    color: @highlight;
+    border: none;
+    text-shadow: 0 0 2px rgba(0, 0, 0, .5);
+}
+#workspaces button.empty {
+    color: @bgDark;
+    border: none;
+    text-shadow: 0 0 1.5px rgba(0, 0, 0, .2);
+}
+#workspaces button.empty.active {
+    color: @highlight;
+    border: none;
+    text-shadow: 0 0 2px rgba(0, 0, 0, .5);
+}
+
+#bluetooth{
+    padding: 0 5px;
+    transition: all .3s ease;
+    color:#ffffff;
+}
+
+#pulseaudio {
+    padding: 0 5px;
+}
+
+#network{
+    padding: 0 5px;
+    transition: all .3s ease;
+    color:#ffffff;
+}
+
+#power-profiles-daemon {
+    padding: 0 5px;
+}
+#power-profiles-daemon.performance {
+    color: #eb1212;
+}
+#power-profiles-daemon.balanced {
+    color: #ffffff;
+}
+#power-profiles-daemon.power-saver {
+    color: #86BBD8;
+}
+
+#battery{
+    padding: 0 5px;
+    transition: all .3s ease;
+    color:#ffffff;
+}
+#battery.critical:not(.charging) {
+    animation-name: blink;
+    animation-duration: 0.5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+#custom-power {
+    color: #ff0000;
+    padding-left: 5px;
+}
+menu {
+    margin: 0;
+	  border-radius: 5px;
+	  background: @bgDarkFull;
+	  color: #B5E8E0;
+}
+menuitem {
+	  border-radius: 3px;
+}
+
+#group-expand{
+    padding: 0 5px;
+    transition: all .3s ease;
+}
+
+#custom-expand{
+    padding: 0 5px;
+    color: alpha(@foreground,.2);
+    text-shadow: 0 0 2px rgba(0, 0, 0, .7);
+    transition: all .3s ease;
+}
+#custom-expand:hover{
+    color:rgba(255,255,255,.2);
+    text-shadow: 0 0 2px rgba(255, 255, 255, .5);
+}
+
+#custom-colorpicker {
+    color: #ffffff;
+    padding: 0 5px;
+}
+
+#cpu,#memory,#temperature{
+    padding: 0 5px;
+    transition: all .3s ease;
+    color:#ffffff;
+}
+
+#custom-endpoint{
+    color:#ffffff;
+    padding: 0 5px 0 5px;
+    text-shadow: 0 0 1.5px rgba(0, 0, 0, 1);
+}
+
+#tray{
+    padding: 0 5px;
+    transition: all .3s ease;
+}
+#tray menu * {
+    padding: 0 5px;
+    transition: all .3s ease;
+}
+#tray menu separator {
+    padding: 0 5px;
+    transition: all .3s ease;
+}
