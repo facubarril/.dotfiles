@@ -9,30 +9,17 @@
     font-family: "CodeNewRoman Nerd Font Propo";
 }
 
-window#waybar{
+#waybar{
     all:unset;
+    box-shadow: 0 0 2px @bgDark;
+    border: 1px solid rgba(255,255,255,.4);
+    background: @bgDark;
 }
 
-.modules-left {
-    padding: 7px;
-    margin: 10 0 0 10;
-    border-radius: 5px;
-    background: @bgLight;
-    box-shadow: 0 0 2px @shadow;
-}
-.modules-center {
-    padding:7px;
-    margin:10 0 0 0;
-    border-radius: 5px;
-    background: @bgLight;
-    box-shadow: 0 0 2px @shadow;
-}
+.modules-left,
+.modules-center,
 .modules-right {
-    padding:7px;
-    margin: 10 10 0 0;
-    border-radius: 5px;
-    background: @bgLight;
-    box-shadow: 0 0 2px @shadow;
+    padding: 8px 10px;
 }
 
 tooltip {
@@ -40,7 +27,12 @@ tooltip {
     color: #ffffff;
 }
 
-#clock:hover, #custom-update:hover, #custom-notification:hover,#bluetooth:hover,#network:hover,#battery:hover, #cpu:hover,#memory:hover,#temperature:hover{
+#custom-menu {
+    margin: 0 5px 0 5px;
+    margin: 0 5px 0 0;
+}
+
+#custom-menu:hover, #clock:hover, #custom-update:hover, #custom-notification:hover,#bluetooth:hover,#network:hover,#battery:hover, #cpu:hover,#memory:hover,#temperature:hover{
     transition: all .3s ease;
     color: @highlight;
 }
@@ -61,6 +53,10 @@ tooltip {
     padding: 0 5px;
     transition: all .3s ease;
     color:#ffffff;
+}
+
+#window {
+    margin-left: 5px;
 }
 
 #workspaces {
@@ -133,16 +129,17 @@ tooltip {
 
 #custom-power {
     color: #ff0000;
-    padding-left: 5px;
+    padding: 0;
+    margin-left: 5px;
 }
 menu {
     margin: 0;
-	  border-radius: 5px;
-	  background: @bgDarkFull;
-	  color: #B5E8E0;
+    border-radius: 5px;
+    background: @bgDarkFull;
+    color: #B5E8E0;
 }
 menuitem {
-	  border-radius: 3px;
+    border-radius: 3px;
 }
 
 #group-expand{
