@@ -1,0 +1,16 @@
+/**
+ *
+ * Author : Facundo Barril (facubarril.dev)
+ * Github : @facubarril
+ *
+ * Colors
+ **/
+
+* {
+    background:     #020c17e6;
+    background-alt: #051d3866;
+    foreground:     #FFFFFFFF;
+    selected:       #FFC13DFF;
+    active:         #00FF00FF;
+    urgent:         #FF0000FF;
+}
