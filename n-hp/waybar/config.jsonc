@@ -34,21 +34,9 @@
     },
     // --- MODULES CENTER
     "hyprland/workspaces": {
-        "format": "{icon}",
-        "format-icons": {
-            "active": "󰔶",
-            "default": "󰔶",
-            "empty": "󰔶"
-        },
+        "format": " ",
         "persistent-workspaces": {
-            "*": [
-                1,
-                2,
-                3,
-                4,
-                5,
-                6
-            ]
+            "*": [ 1, 2, 3, 4, 5, 6 ]
         }
     },
     "custom/notification": {

@@ -32,7 +32,7 @@ tooltip {
     margin: 0 5px 0 0;
 }
 
-#custom-menu:hover, #clock:hover, #custom-update:hover, #custom-notification:hover,#bluetooth:hover,#network:hover,#battery:hover, #cpu:hover,#memory:hover,#temperature:hover{
+#custom-expand:hover, #custom-menu:hover, #clock:hover, #custom-update:hover, #custom-notification:hover,#bluetooth:hover,#network:hover,#battery:hover, #cpu:hover,#memory:hover,#temperature:hover{
     transition: all .3s ease;
     color: @highlight;
 }
@@ -67,22 +67,16 @@ tooltip {
     -gtk-icon-transform: rotate(90deg);
     padding: 0 5px;
     color: #ffffff;
-    transition: all .2s ease;
-}
-#workspaces button.active {
-    color: @highlight;
-    border: none;
-    text-shadow: 0 0 2px rgba(0, 0, 0, .5);
+    margin: 0 4px;
+    background-size: 18px;
+    background: url('./icons/triangle.svg') no-repeat center / contain;
 }
 #workspaces button.empty {
-    color: @bgDark;
-    border: none;
-    text-shadow: 0 0 1.5px rgba(0, 0, 0, .2);
+    background-image: url('./icons/triangle-outline.svg');
 }
-#workspaces button.empty.active {
-    color: @highlight;
-    border: none;
-    text-shadow: 0 0 2px rgba(0, 0, 0, .5);
+#workspaces button.active, #workspaces button.empty.active {
+    margin: 0px;
+    background-image: url('./icons/triangle-down.svg')
 }
 
 #bluetooth{
@@ -141,7 +135,6 @@ menu {
 menuitem {
     border-radius: 3px;
 }
-
 #group-expand{
     padding: 0 5px;
     transition: all .3s ease;
@@ -152,10 +145,6 @@ menuitem {
     color: alpha(@foreground,.2);
     text-shadow: 0 0 2px rgba(0, 0, 0, .7);
     transition: all .3s ease;
-}
-#custom-expand:hover{
-    color:rgba(255,255,255,.2);
-    text-shadow: 0 0 2px rgba(255, 255, 255, .5);
 }
 
 #custom-colorpicker {
